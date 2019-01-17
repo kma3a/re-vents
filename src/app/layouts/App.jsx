@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Container} from 'semantic-ui-react';
 import {Route, Switch} from 'react-router-dom';
 import EventDashboard from '../../features/event/EventDashboard/EventDashboard';
-import EventDetailedPage from '../../features/event/EventDetailed/EventDetailed';
+import EventDetailedPage from '../../features/event/EventDetailed/EventDetailedPage';
 import NavBar from '../../features/nav/NavBar/NavBar';
 import PeopleDashboard from '../../features/user/PeopleDashboard/PeopleDashboard';
 import UserDetailed from '../../features/user/UserDetailed/UserDetailedPage';
@@ -26,7 +26,8 @@ class App extends Component {
                 <Switch>
                   <Route path='/events' component={EventDashboard}/>
                   <Route path='/test' component={TestComponent}/>
-                  <Route path='/events/:id' component={EventDetailedPage}/>
+                  <Route path='/event/:id' component={EventDetailedPage}/>
+                  <Route path='/manage/:id' component={EventForm}/>
                   <Route path='/people' component={PeopleDashboard}/>
                   <Route path='/profile/:id' component={UserDetailed}/>
                   <Route path='/settings' component={SettingsDashboard}/>
